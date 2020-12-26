@@ -31,13 +31,13 @@ export default {
     methods: {
         favouriteTweet(id) {
             console.log("clicked");
-            this.$emit('favourite', id)
+            this.$emit('favourite', id);
         }
     }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .tweet-item {
   padding: 20px;
   background-color: white;
@@ -46,12 +46,14 @@ export default {
   box-sizing: border-box;
   cursor: pointer;
   transition: all 0.25s ease;
-}
-.tweet-item:hover {
-    transform: scale(1.1, 1.1);
-}
-.tweet-item__user {
-    font-weight: bold;
+
+    .tweet-item__user {
+      font-weight: bold;
+    }
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
 }
 
 </style>
